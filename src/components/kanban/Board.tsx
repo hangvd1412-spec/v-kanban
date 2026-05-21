@@ -212,7 +212,7 @@ export function Board() {
       try {
         const json = JSON.parse(event.target?.result as string);
         if (Array.isArray(json.columns) && Array.isArray(json.tasks)) {
-          importData(json.columns, json.tasks);
+          setBoardData(json.columns, json.tasks);
           alert('Khôi phục dữ liệu thành công!');
         } else {
           alert('File JSON không hợp lệ. Vui lòng kiểm tra lại cấu trúc.');
